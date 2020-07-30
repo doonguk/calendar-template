@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.month {
+  font-size: 25px;
+}
+
+.month i {
+  cursor: pointer;
+}
+
+.weekdays {
+  margin-top: 30px;
+  display: flex;
+  width: 50%;
+  color: black;
+}
+
+.weekdays div {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: calc(100% / 7);
+  height: 3rem;
+}
+
+.days {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days div {
+  font-size: 1.4rem;
+  width: calc(100% / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  cursor: pointer;
+  color: #eeeeee;
+}
+
+.today {
+  color: darkcyan;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.red {
+  color: red;
+}
